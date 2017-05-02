@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/training_curse"
+        android:icon="@drawable/ic_training"
+        android:title="Traning" />
+    <item
+        android:id="@+id/book"
+        android:icon="@drawable/ic_default_image"
+        android:title="books"/>
+    <item
+        android:id="@+id/feedback"
+        android:icon="@drawable/ic_fedback"
+        android:title="feedback"/>
+   </group>
+</menu>
