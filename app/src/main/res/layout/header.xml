@@ -2,17 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="@color/colorPrimary">
+    android:background="#cccccc">
 
     <ImageView
+        android:id="@+id/profile"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_contect"/>
     <TextView
+        android:id="@+id/profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/profile"
+        android:layout_centerInParent="true"
+        android:text="User Name"/>
 
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:text="Edit"/>
+    <TextView
+        android:id="@+id/txt_logout"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Logout"/>
 </RelativeLayout>

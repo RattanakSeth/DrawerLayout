@@ -1,5 +1,6 @@
 package kh.edu.rupp.drawerlayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import kh.edu.rupp.drawerlayout.adapter.NewsAdapter;
 import kh.edu.rupp.drawerlayout.datamodel.Article;
@@ -55,8 +57,13 @@ public class NewsActivity extends Fragment implements RecyclerViewItemClickListe
         Article a2 = new Article("ch. Introduction of andr",1,"");
         Article a3 = new Article("ch. Introduction of andr",1,"");
         Article a4 = new Article("ch. Introduction of andr",1,"");
+        Article a5 = new Article("ch. Introduction of andr",2,"");
+        Article a6 = new Article("ch. Introduction of andr",3,"");
+        Article a7 = new Article("ch. Introduction of andr",2,"");
+        Article a8 = new Article("ch. Introduction of andr",2,"");
 
-        Article[] articles = {a1,a2,a3,a4};
+
+        Article[] articles = {a1,a2,a3,a4,a5,a6,a7,a8};
         return articles;
     }
 
