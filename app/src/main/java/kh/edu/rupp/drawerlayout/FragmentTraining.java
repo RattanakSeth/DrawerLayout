@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * Created by ratan on 4/20/2017.
@@ -15,10 +16,16 @@ import android.view.ViewGroup;
 public class FragmentTraining extends Fragment {
 
     private RecyclerView recyclerView;
+    private TextView contectName;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.layout_training,container,false);
+        View fragmentView =  inflater.inflate(R.layout.layout_training,container,false);
+        contectName = (TextView)fragmentView.findViewById(R.id.nameofcontect);
+
+        contectName.setText("i love you");
+
+        return fragmentView;
     }
 }

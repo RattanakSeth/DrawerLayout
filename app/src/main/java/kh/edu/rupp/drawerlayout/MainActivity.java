@@ -17,14 +17,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private DrawerLayout drawerLayout;
+    private TextView profilename;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //get user name from share reference
-        //TextView profilename = (TextView)findViewById(R.id.profile_name);
-        //profilename.setText("ksskk");
+        profilename = (TextView) findViewById(R.id.profile_name);
+       // profilename.setText("noname");
+
 
         //draw toolbar
         Toolbar tlbMain= (Toolbar)findViewById(R.id.tlb_main);
@@ -44,7 +46,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, tlbMain, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
-
+        //get data that store in share reference
+        SharedPreferences preferences = getSharedPreferences("user.pref",MODE_PRIVATE);
+        String username = preferences.getString("name","Rattanak");
+        TextView txtUsername = (TextView) navigationHeaderView.findViewById(R.id.profile_name);
+        txtUsername.setText(username);
 
 
     }
